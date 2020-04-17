@@ -5,13 +5,13 @@ b
 
 nav
 {
-	background-color: rgb(77, 166, 255);
+	background-color: rgb(77, 124, 255);
    /*height: 40px;*/
 }
 
 mat-card
 {
-	background-color:rgb(153, 204, 255);
+	background-color:rgb(252, 153, 255);
    height:130px;
 }
 

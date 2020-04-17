@@ -1,7 +1,7 @@
 
 div
 {
-	background-color:  rgb(204, 230, 255);
+	background-color:  rgb(206, 255, 204);
 	min-height:500px;
 	display: flex;
 	justify-content: center;
@@ -10,7 +10,7 @@ div
 
 mat-card
 {
-	background-color:rgb(204, 255, 204);
+	background-color:rgb(23, 194, 23);
 	min-height:400px;
 	min-width: 800px;
 	border:solid;

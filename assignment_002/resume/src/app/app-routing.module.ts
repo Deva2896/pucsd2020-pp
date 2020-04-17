@@ -20,8 +20,8 @@ const routes: Routes = [
 	{ path: 'Assignment' , component :AssignmentInfoComponent},
 	{ path: 'About' , component :AboutMeComponent},
 	{ path: 'Links' , component :ImportanrLinkComponent},
-	// { path: 'Home' , component :HomeComponent},
-	{ path: '' , component :HomeComponent}
+	{ path: 'Home' , component :HomeComponent},
+	{ path: '' , component :HomeComponent},
 ];
 
 @NgModule({

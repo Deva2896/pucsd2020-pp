@@ -1,0 +1,125 @@
+
+	<header class="p1" *ngIf="loginSuccess==true" >
+		<mat-card class="head">
+			<div class="row">
+				<div class="col-1">
+					<img src="assets/API.png" height="40">
+				</div>
+				<div class="col-9">
+					<b>	Student Mangement</b>
+				</div>
+				
+				<div class="col-1" >
+					<h3>Home</h3>
+				</div>
+
+				<div class="col-1" >
+					<h3>Abous Us</h3>
+				</div>
+			</div>
+		</mat-card>
+		
+	</header>
+
+	<div *ngIf="firstLogin==true" align="center" style="padding: 100px" class="image3">
+		<mat-card class="login">
+				<form (submit)="login()">
+					<div align="center" style="padding: 10px">
+						
+						<div class="col">
+
+							<div class="row-2">
+								<mat-form-field class="input">
+								    <input matInput [(ngModel)]="username" name="username" placeholder="Username">
+								 </mat-form-field>
+							</div>
+
+							<div class="row-2">
+								<mat-form-field class="input" >
+								    <input matInput  class="input" [(ngModel)]="password" name="password" placeholder="Password">
+								 </mat-form-field>
+							</div>
+
+						</div>
+
+						<div class="row" >
+							<div class="col-6" style="padding: 15px">
+								<button mat-button class="g1" type="reset">RESET</button>
+							</div>
+							<div class="col-6" style="padding: 15px">
+								<button mat-button class="g1"  type="submit">LOGIN</button>
+							</div>
+
+						</div>
+				</div>
+			</form>
+		</mat-card>
+	</div>
+
+	<div class="row" *ngIf="loginSuccess==true">
+		<div class="col-2">
+			<div class="sidebar image2">
+				<div class="col" >
+					<div class="row-3" style="padding: 10px">
+						<button mat-button class="operation" (click)="performOperation()">Select</button>
+					</div>
+					<div class="row-9 col" *ngIf="operationEnable==true">
+						<div class="row-3" style="padding: 40px">
+							<button  class="get" (click)="GetMethod()">Get</button>
+						</div>
+						<div class="row-3" style="padding: 40px">
+							<button  class="get" (click)="postMethod()">Add</button>
+						</div>
+						<div class="row-3" style="padding: 40px">
+							<button  class="get" (click)="putMethod()">Update</button>
+						</div>
+						<div class="row-3" style="padding: 40px">
+							<button  class="get" (click)="deleteMethod()">Delete</button>
+						</div>
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>	
+
+
+		<div class="col-10">
+			<div class="main image"> 
+
+			
+				<div *ngIf="getEnable==true" style="padding: 50px">
+					<app-get></app-get>
+				</div>
+
+				<!-- POST -->
+
+				<div *ngIf="postEnable==true" style="padding: 50px">
+					<div>
+						<app-post></app-post>
+					</div>
+				</div>
+
+				<!-- PUT -->
+
+				<div *ngIf="putEnable==true" style="padding: 50px">
+					<div>
+						<app-put></app-put>
+					</div>
+				</div>
+
+				<!-- DELETE -->
+
+				<div *ngIf="delEnable==true" style="padding: 50px">
+					<div>
+						<app-delete></app-delete>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</div>
+<!-- </mat-card> -->
+
+<router-outlet></router-outlet>

@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'resume';
-  navLinks=['personal_info','educational_info','technical-skill','project_info','assignment_info','about_me','important_link'];
-  navNames=['Personal','Educational','Technical','Project','Assignment','About','Links',]
+  navLinks=['personal_info','educational_info','technical-skill','project_info','assignment_info','about_me','important_link','Home'];
+  navNames=['Personal','Educational','Technical','Project','Assignment','About','Links','Home']
 }
